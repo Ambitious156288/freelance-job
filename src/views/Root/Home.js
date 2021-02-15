@@ -3,7 +3,6 @@ import Navbar from 'components/organisms/Navbar';
 
 const Home = () => (
   <div>
-    Home
     <Navbar />
     text center
     <br />

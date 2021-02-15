@@ -1,5 +1,5 @@
 export const theme = {
-  white: '#FFFFFF',
+  white: 'white',
   red: '#E71D36',
   black: '#19180A',
   orange: '#AF4319',
@@ -7,7 +7,6 @@ export const theme = {
   bold: 'bold',
   italic: 'italic',
 
-  // te fonty ogarnac !!!!!
   font1: 'Playfair Display',
   font2: 'Titillium Web',
 
