@@ -5,6 +5,7 @@ export const theme = {
   orange: '#AF4319',
 
   bold: 'bold',
+  italic: 'italic',
 
   // te fonty ogarnac !!!!!
   font1: 'Playfair Display',
