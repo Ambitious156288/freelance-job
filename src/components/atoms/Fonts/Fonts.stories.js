@@ -3,10 +3,10 @@ import { storiesOf } from '@storybook/react';
 import Fonts from './Fonts';
 
 storiesOf('Fonts', module)
-  .add('1', () => <Fonts Playfair>Hello Roman</Fonts>)
-  .add('2', () => (
+  .add('Playfair Display', () => <Fonts Playfair>Hello Roman</Fonts>)
+  .add('Playfair Display bold', () => (
     <Fonts Playfair bold>
       Hello Roman
     </Fonts>
   ))
-  .add('3', () => <Fonts>Hello Roman</Fonts>);
+  .add('Titillium Web', () => <Fonts>Hello Roman</Fonts>);

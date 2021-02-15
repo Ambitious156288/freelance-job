@@ -1,25 +1,26 @@
 import styled, { css } from 'styled-components';
 
 const Button = styled.button`
-  padding: 0;
-  background-color: ${({ theme }) => theme.primary};
-  width: 200px;
-  height: 50px;
-  border: none;
-  border-radius: 50px;
-  font-family: 'Montserrat';
-  font-weight: 500;
-  font-size: 16px;
-  text-transform: uppercase;
+  width: ${({ theme }) => theme.smallButtonWidth};
+  height: ${({ theme }) => theme.smallButtonHeight};
+  font-size: ${({ theme }) => theme.smallButtonFontSize};
 
-  ${({ secondary }) =>
-    secondary &&
+  color: ${({ theme }) => theme.white};
+  border-radius: 13px;
+  background-color: ${({ theme }) => theme.red};
+  border: none;
+  font-weight: ${({ theme }) => theme.bold};
+  font-family: 'Titillium Web', sans-serif;
+
+  ${({ big }) =>
+    big &&
     css`
-      background-color: gray;
-      width: 100px;
-      height: 30px;
-      font-size: 10px;
-    `}
+      width: ${({ theme }) => theme.bigButtonWidth};
+      height: ${({ theme }) => theme.bigButtonHeight};
+      font-size: ${({ theme }) => theme.bigButtonSize};
+      font-family: 'Playfair Display', serif;
+      text-transform: uppercase;
+    `};
 `;
 
 export default Button;
