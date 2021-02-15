@@ -1,62 +1,41 @@
 import React from 'react';
 import styled from 'styled-components';
-import Navbar from 'components/organisms/Navbar';
-import shoes1 from 'assets/icons/shoes1.png';
-import shoes2 from 'assets/icons/shoes2.png';
-import Fonts from 'components/atoms/Fonts/Fonts';
-import Button from 'components/atoms/Button/Button';
+import shoemaker from 'assets/icons/shoemaker.jpg';
+
+const StyledView = styled.div`
+  position: relative;
+`;
+
+const StyledBgc = styled.div`
+  position: absolute;
+  right: 0;
+  height: 100vh;
+  z-index: -1;
+`;
 
 const StyledDiv = styled.div`
-  display: flex;
-`;
-
-const StyledFirstParagraph = styled(Fonts)`
-  font-size: 70px;
-  text-decoration: underline;
-`;
-
-const StyledSecondParagraph = styled(Fonts)`
-  font-size: 34px;
-  font-weight: 300;
-  margin: 25px 0 150px 0;
-`;
-
-const StyledCenter = styled.div`
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  margin-top: 25vh;
-`;
-
-const BlackShoe = styled.img`
-  margin-top: 10vh;
-  z-index: -1;
-`;
-
-const StyledRotateShoe = styled.img`
-  transform: rotate(180deg);
-  margin-top: -50vh;
-  z-index: -1;
+  position: absolute;
+  left: 0;
+  height: 100vh;
+  width: 50vw;
+  background-color: ${({ theme }) => theme.black};
 `;
 
 const About = () => (
-  <>
-    <Navbar id="about" />
+  <StyledView>
+    <StyledBgc id="about">
+      <img src={shoemaker} width="1624px" height="100%" alt="shoemaker" />
+    </StyledBgc>
 
     <StyledDiv>
-      <BlackShoe src={shoes1} width="602" height="1287" />
-
-      <StyledCenter>
-        <StyledFirstParagraph Playfair black>
-          BnK Usługi Szewskie
-        </StyledFirstParagraph>
-        <StyledSecondParagraph black>Profesjonalna Naprawa Obuwia</StyledSecondParagraph>
-        <Button big>Skontaktuj się z nami</Button>
-      </StyledCenter>
-
-      <StyledRotateShoe src={shoes2} width="623" height="1330" />
+      <title>Kim jesteśmy?</title>
+      <p>
+        Jako firma specjalizujemy się przede wszystkim w naprawie obuwia. Naprawiamy obuwie
+        wizytowe, sportowe oraz luksusowe !! Doświadczenie zawodowe pozwala nam na wykonanie wielu
+        usług na najwyższym poziomie estetycznym w sposób bardzo tradycyjny i profesjonalny !!
+      </p>
     </StyledDiv>
-  </>
+  </StyledView>
 );
 
 export default About;

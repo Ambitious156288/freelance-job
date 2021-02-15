@@ -3,11 +3,12 @@ import GlobalStyle from 'theme/GlobalStyle';
 import styled, { ThemeProvider } from 'styled-components';
 import { theme } from 'theme/mainTheme';
 
-import About from './About';
+import Home from './Home';
 import Services from './Services';
 import Price from './Price';
 import Find from './Find';
 import Contact from './Contact';
+import About from './About';
 
 const StyledView = styled.div`
   height: 100vh;
@@ -19,6 +20,10 @@ const Root = () => (
     <GlobalStyle />
     <ThemeProvider theme={theme}>
       <>
+        <StyledView>
+          <Home />
+        </StyledView>
+
         <StyledView>
           <About />
         </StyledView>
