@@ -4,21 +4,6 @@ import Fonts from 'components/atoms/Fonts/Fonts';
 import Paper from '@material-ui/core/Paper';
 import Tabs from '@material-ui/core/Tabs';
 import Tab from '@material-ui/core/Tab';
-// import Navigation from '../molecules/Navigation/Navigation';
-
-// const NavDiv = styled.div`
-//   display: flex;
-//   justify-content: space-between;
-//   align-items: center;
-//
-//   background-color: ${({ theme }) => theme.black};
-//   color: white;
-//
-// `;
-
-// .MuiTab-textColorSecondary.Mui-selected {
-//   color: #f50057;
-// }
 
 const StyledFonts = styled(Fonts)`
   font-size: 55px;
@@ -29,7 +14,6 @@ const StyledTab = styled(Tab)`
   font-family: 'Titillium Web', sans-serif !important;
   font-size: 28px !important;
   background-color: ${({ theme }) => theme.black} !important;
-  /* color: ${({ theme }) => theme.white} !important; */
 `;
 
 const StyledDiv = styled.div`
@@ -61,17 +45,14 @@ const Navbar = () => {
               onChange={handleChange}
               // orientation="vertical"
             >
-              <StyledTab label="O nas" />
-              <StyledTab label="USŁUGI" />
-              <StyledTab label="CENNIK" />
-              <StyledTab label="ZNAJDŹ NAS" />
-              <StyledTab label="KONTAKT" href="#kontakt" />
+              <StyledTab label="O nas" href="#about" />
+              <StyledTab label="USŁUGI" href="#services" />
+              <StyledTab label="CENNIK" href="#price" />
+              <StyledTab label="ZNAJDŹ NAS" href="#find" />
+              <StyledTab label="KONTAKT" href="#contact" />
             </Tabs>
           </Fonts>
         </Paper>
-        {/* <div>
-          <a href="#kontakt">aa</a>
-        </div> */}
       </StyledDiv>
     </>
   );

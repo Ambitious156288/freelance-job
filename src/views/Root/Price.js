@@ -1,7 +1,7 @@
 import React from 'react';
 
 const Price = () => (
-  <div>
+  <div id="price">
     Cennik
     <hr />
   </div>

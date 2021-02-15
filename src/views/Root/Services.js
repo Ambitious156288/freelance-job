@@ -1,10 +1,15 @@
 import React from 'react';
+import styled from 'styled-components';
+
+const StyledVisible = styled.div`
+  /* z-index: -10000; */
+`;
 
 const Services = () => (
-  <div>
+  <StyledVisible id="services">
     Uslugi
     <hr />
-  </div>
+  </StyledVisible>
 );
 
 export default Services;

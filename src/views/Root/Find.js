@@ -1,7 +1,7 @@
 import React from 'react';
 
 const Find = () => (
-  <div>
+  <div id="find">
     Znajdz nas
     <hr />
   </div>
