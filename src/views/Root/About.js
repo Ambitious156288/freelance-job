@@ -28,6 +28,7 @@ const StyledFirst = styled(Fonts)`
   font-weight: bold;
   font-style: italic;
   color: ${({ theme }) => theme.orange};
+  margin-left: -100px;
 `;
 
 const StyledSecond = styled(Fonts)`
