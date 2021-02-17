@@ -1,11 +1,14 @@
 import React from 'react';
 import AppMap from '../../data/AppMap';
+// import MarkersMap from './MarkersMap';
 
 const Find = () => {
   return (
     <>
       <div id="find">Znajdz nas</div>
       <AppMap />
+
+      {/* <MarkersMap /> */}
     </>
   );
 };

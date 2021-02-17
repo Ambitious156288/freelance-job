@@ -1,11 +1,54 @@
 /* eslint-disable no-undef */
 import React, { useState, useEffect } from 'react';
 import { withGoogleMap, withScriptjs, GoogleMap, Marker, InfoWindow } from 'react-google-maps';
-import * as parkData from './mapFile.json';
 import mapStyles from './mapStyles';
 
 function Map() {
-  const [selectedPark, setSelectedPark] = useState(null);
+  const [, setSelectedPark] = useState(null);
+
+  const [selected, setSelected] = useState({});
+
+  const onSelect = item => {
+    setSelected(item);
+  };
+
+  const locations = [
+    {
+      name: 'Location 1',
+      location: {
+        lat: 50.01761,
+        lng: 19.89325,
+      },
+    },
+    {
+      name: 'Location 2',
+      location: {
+        lat: 50.00597,
+        lng: 19.89687,
+      },
+    },
+    {
+      name: 'Location 3',
+      location: {
+        lat: 50.06272,
+        lng: 19.96092,
+      },
+    },
+    {
+      name: 'Location 4',
+      location: {
+        lat: 50.001,
+        lng: 19.91259,
+      },
+    },
+    {
+      name: 'Location 5',
+      location: {
+        lat: 41.4055,
+        lng: 2.1915,
+      },
+    },
+  ];
 
   useEffect(() => {
     const listener = e => {
@@ -22,13 +65,13 @@ function Map() {
 
   return (
     <GoogleMap
-      defaultZoom={10}
+      defaultZoom={12}
       defaultCenter={{ lat: 50.01761, lng: 19.89325 }}
       defaultOptions={{ styles: mapStyles }}
     >
-      {parkData.features.map(park => (
+      {/* {parkData.features.map(park => (
         <Marker
-          key={park.properties.PARK_ID}
+          // key={park.properties.PARK_ID}
           position={{
             lat: park.geometry.coordinates[1],
             lng: park.geometry.coordinates[0],
@@ -57,6 +100,16 @@ function Map() {
             <h2>{selectedPark.properties.NAME}</h2>
             <p>{selectedPark.properties.DESCRIPTIO}</p>
           </div>
+        </InfoWindow>
+      )} */}
+
+      {locations.map(item => {
+        return <Marker key={item.name} position={item.location} onClick={() => onSelect(item)} />;
+      })}
+
+      {selected.location && (
+        <InfoWindow position={selected.location} clickable onCloseClick={() => setSelected({})}>
+          <p>{selected.name}</p>
         </InfoWindow>
       )}
     </GoogleMap>
