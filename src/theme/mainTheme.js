@@ -3,6 +3,7 @@ export const theme = {
   red: '#E71D36',
   black: '#19180A',
   orange: '#AF4319',
+  footerColor: '#414347',
 
   bold: 'bold',
   italic: 'italic',
