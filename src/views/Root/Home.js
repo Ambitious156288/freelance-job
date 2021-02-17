@@ -1,10 +1,10 @@
 import React from 'react';
 import styled from 'styled-components';
-import Navbar from 'components/organisms/Navbar';
+import Navbar from 'components/organisms/Navbar/Navbar';
 import shoes1 from 'assets/icons/shoes1.png';
 import shoes2 from 'assets/icons/shoes2.png';
 import Fonts from 'components/atoms/Fonts/Fonts';
-import Button from 'components/atoms/Button/Button';
+import Btn from 'components/atoms/Button/Btn';
 
 const StyledDiv = styled.div`
   display: flex;
@@ -39,7 +39,7 @@ const StyledRotateShoe = styled.img`
   z-index: -1;
 `;
 
-const StyledButton = styled(Button)`
+const StyledButton = styled(Btn)`
   cursor: pointer;
 `;
 

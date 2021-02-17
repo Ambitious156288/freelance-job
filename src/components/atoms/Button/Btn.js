@@ -1,6 +1,6 @@
 import styled, { css } from 'styled-components';
 
-const Button = styled.button`
+const Btn = styled.button`
   width: ${({ theme }) => theme.smallButtonWidth};
   height: ${({ theme }) => theme.smallButtonHeight};
   font-size: ${({ theme }) => theme.smallButtonFontSize};
@@ -23,4 +23,4 @@ const Button = styled.button`
     `};
 `;
 
-export default Button;
+export default Btn;

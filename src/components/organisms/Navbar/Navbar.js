@@ -22,7 +22,6 @@ const StyledDiv = styled.div`
   align-items: flex-end;
   background-color: ${({ theme }) => theme.black};
   padding: 0 50px 0 50px;
-  /* height: 70px; */
 `;
 
 const Navbar = () => {

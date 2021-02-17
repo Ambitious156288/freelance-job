@@ -10,6 +10,21 @@ import tel from 'assets/icons/tel.png';
 import email from 'assets/icons/email.png';
 import fb from 'assets/icons/fb.png';
 
+import ContactForm from 'components/organisms/ContactForm/ContactForm';
+
+const useStyles = makeStyles(theme => ({
+  root: {
+    flexGrow: 1,
+    overflow: 'hidden',
+    padding: theme.spacing(0, 3),
+  },
+  paper: {
+    maxWidth: 700,
+    margin: `${theme.spacing(1)}px auto`,
+    padding: theme.spacing(6),
+  },
+}));
+
 const StyledContact = styled.div`
   height: 95vh;
   background-color: ${({ theme }) => theme.red};
@@ -26,6 +41,11 @@ const StyledSecondP = styled(Fonts)`
   font-weight: bold;
 `;
 
+const StyledFrom = styled.div`
+  border-radius: 20px;
+  background-color: ${({ theme }) => theme.white};
+`;
+
 const StyledFooter = styled.div`
   height: 5vh;
   display: flex;
@@ -40,19 +60,6 @@ const StyledFontFooter = styled(Fonts)`
   opacity: 0.3;
   letter-spacing: 1px;
 `;
-
-const useStyles = makeStyles(theme => ({
-  root: {
-    flexGrow: 1,
-    overflow: 'hidden',
-    padding: theme.spacing(0, 3),
-  },
-  paper: {
-    maxWidth: 700,
-    margin: `${theme.spacing(1)}px auto`,
-    padding: theme.spacing(6),
-  },
-}));
 
 const Contact = () => {
   const classes = useStyles();
@@ -112,7 +119,9 @@ const Contact = () => {
         </Grid>
 
         <Grid item xs={6}>
-          <div className={classes.paper}>react form !!!</div>
+          <StyledFrom className={classes.paper}>
+            <ContactForm />
+          </StyledFrom>
         </Grid>
       </>
     );
