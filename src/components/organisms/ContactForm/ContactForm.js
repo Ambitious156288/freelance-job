@@ -7,6 +7,7 @@ import Btn from 'components/atoms/Button/Btn';
 import { useFormik } from 'formik';
 import * as yup from 'yup';
 import TextField from '@material-ui/core/TextField';
+import { makeStyles } from '@material-ui/core/styles';
 
 const validationSchema = yup.object({
   email: yup
@@ -33,11 +34,26 @@ const StyledTitle = styled(Fonts)`
   font-style: italic;
 `;
 
-const StyledInputs = styled(Fonts)`
-  font-size: 24px;
+const useStyles = makeStyles(() => ({
+  root: { color: 'black', fontSize: '24px' },
+  textField: {
+    color: 'black',
+    fontSize: 24,
+  },
+}));
+
+const StyledBtnDiv = styled.div`
+  display: flex;
+  justify-content: flex-end;
+`;
+
+const StyledBtn = styled(Btn)`
+  cursor: pointer;
 `;
 
 const ContactForm = () => {
+  const classes = useStyles();
+
   const formik = useFormik({
     initialValues: {
       email: '',
@@ -58,31 +74,32 @@ const ContactForm = () => {
           <StyledTitle Playfair black>
             Napisz do nas
           </StyledTitle>
-
-          <StyledInputs></StyledInputs>
-
           <TextField
             fullWidth
             id="fullName"
             name="fullName"
             label="Imię i nazwisko:"
+            className={classes.textField}
             value={formik.values.fullName}
             onChange={formik.handleChange}
             error={formik.touched.fullName && Boolean(formik.errors.fullName)}
             helperText={formik.touched.fullName && formik.errors.fullName}
           />
-
+          <br />
+          <br />
           <TextField
             fullWidth
             id="email"
             name="email"
             label="Twój email:"
+            className={classes.textField}
             value={formik.values.email}
             onChange={formik.handleChange}
             error={formik.touched.email && Boolean(formik.errors.email)}
             helperText={formik.touched.email && formik.errors.email}
           />
-
+          <br />
+          <br />
           <TextField
             fullWidth
             id="topic"
@@ -93,17 +110,23 @@ const ContactForm = () => {
             error={formik.touched.topic && Boolean(formik.errors.topic)}
             helperText={formik.touched.topic && formik.errors.topic}
           />
+          <br />
+          <br />
 
           <TextField
             fullWidth
             id="content"
             name="content"
             label="Treść wiadomości:"
+            multiline
+            rows={10}
             value={formik.values.content}
             onChange={formik.handleChange}
             error={formik.touched.content && Boolean(formik.errors.content)}
             helperText={formik.touched.content && formik.errors.content}
           />
+          <br />
+          <br />
 
           <div>
             <input type="file" className="inputFile" data-testid="inputFile" />
@@ -111,10 +134,14 @@ const ContactForm = () => {
               <div className="fileName" data-testid="fileName"></div>
             </div>
           </div>
+          <br />
+          <br />
 
-          <Btn color="primary" variant="contained" fullWidth type="submit">
-            Submit
-          </Btn>
+          <StyledBtnDiv>
+            <StyledBtn color="primary" variant="contained" type="submit">
+              Wyślij
+            </StyledBtn>
+          </StyledBtnDiv>
         </form>
       </div>
     </>

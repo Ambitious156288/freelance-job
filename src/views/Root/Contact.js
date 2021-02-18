@@ -23,6 +23,11 @@ const useStyles = makeStyles(theme => ({
     margin: `${theme.spacing(1)}px auto`,
     padding: theme.spacing(6),
   },
+  form: {
+    maxWidth: 700,
+    padding: theme.spacing(6),
+    margin: '80px',
+  },
 }));
 
 const StyledContact = styled.div`
@@ -41,7 +46,7 @@ const StyledSecondP = styled(Fonts)`
   font-weight: bold;
 `;
 
-const StyledFrom = styled.div`
+const StyledForm = styled.div`
   border-radius: 20px;
   background-color: ${({ theme }) => theme.white};
 `;
@@ -119,9 +124,9 @@ const Contact = () => {
         </Grid>
 
         <Grid item xs={6}>
-          <StyledFrom className={classes.paper}>
+          <StyledForm className={classes.form}>
             <ContactForm />
-          </StyledFrom>
+          </StyledForm>
         </Grid>
       </>
     );
