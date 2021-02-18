@@ -1,3 +1,25 @@
+const breakpoints = {
+  smallSmartphone: 320,
+  smartphone: 480,
+  bigphone: 600,
+
+  smallTablet: 600,
+  tablet: 801,
+  bigTablet: 1025,
+
+  laptops: 1281,
+
+  smallDesktop: 1366,
+  Desktop: 1690,
+  bigDesktop: 1920,
+
+  // smallTablet: 576,
+  // tablet: 768,
+  // desktop: 1200,
+  // smallDesktop: 996,
+  // bigDesktop: 1600,
+};
+
 export const theme = {
   white: 'white',
   red: '#E71D36',
@@ -18,4 +40,9 @@ export const theme = {
   smallButtonFontSize: '30px',
   smallButtonHeight: '74px',
   smallButtonWidth: '185px',
+
+  mq: Object.keys(breakpoints).reduce((acc, breakpoint) => {
+    acc[breakpoint] = `@media (min-width: ${breakpoints[breakpoint]}px)`;
+    return acc;
+  }, {}),
 };

@@ -31,6 +31,12 @@ const StyledCenter = styled.div`
 const BlackShoe = styled.img`
   margin-top: 10vh;
   z-index: -1;
+
+  ${({ theme }) => theme.mq.smallTablet} {
+    /* padding: 80px 90px; */
+    width: 60px;
+    height: 128px;
+  }
 `;
 
 const StyledRotateShoe = styled.img`
