@@ -29,16 +29,18 @@ const validationSchema = yup.object({
 });
 
 const StyledTitle = styled(Fonts)`
+  text-align: center;
   font-size: 55px;
   font-weight: bold;
   font-style: italic;
+  padding-bottom: 25px;
 `;
 
 const useStyles = makeStyles(() => ({
-  root: { color: 'black', fontSize: '24px' },
-  textField: {
-    color: 'black',
+  root: { fontSize: 24 },
+  resize: {
     fontSize: 24,
+    marginTop: 8,
   },
 }));
 
@@ -75,11 +77,16 @@ const ContactForm = () => {
             Napisz do nas
           </StyledTitle>
           <TextField
+            InputLabelProps={{ style: { fontSize: 24 } }}
+            InputProps={{
+              classes: {
+                input: classes.resize,
+              },
+            }}
             fullWidth
             id="fullName"
             name="fullName"
             label="Imię i nazwisko:"
-            className={classes.textField}
             value={formik.values.fullName}
             onChange={formik.handleChange}
             error={formik.touched.fullName && Boolean(formik.errors.fullName)}
@@ -88,11 +95,16 @@ const ContactForm = () => {
           <br />
           <br />
           <TextField
+            InputLabelProps={{ style: { fontSize: 24 } }}
+            InputProps={{
+              classes: {
+                input: classes.resize,
+              },
+            }}
             fullWidth
             id="email"
             name="email"
             label="Twój email:"
-            className={classes.textField}
             value={formik.values.email}
             onChange={formik.handleChange}
             error={formik.touched.email && Boolean(formik.errors.email)}
@@ -101,6 +113,12 @@ const ContactForm = () => {
           <br />
           <br />
           <TextField
+            InputLabelProps={{ style: { fontSize: 24 } }}
+            InputProps={{
+              classes: {
+                input: classes.resize,
+              },
+            }}
             fullWidth
             id="topic"
             name="topic"
@@ -114,6 +132,12 @@ const ContactForm = () => {
           <br />
 
           <TextField
+            InputLabelProps={{ style: { fontSize: 24 } }}
+            InputProps={{
+              classes: {
+                input: classes.resize,
+              },
+            }}
             fullWidth
             id="content"
             name="content"
@@ -125,6 +149,7 @@ const ContactForm = () => {
             error={formik.touched.content && Boolean(formik.errors.content)}
             helperText={formik.touched.content && formik.errors.content}
           />
+          <br />
           <br />
           <br />
 
