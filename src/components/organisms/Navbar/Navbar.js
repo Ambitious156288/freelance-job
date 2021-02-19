@@ -8,12 +8,20 @@ import Tab from '@material-ui/core/Tab';
 const StyledFonts = styled(Fonts)`
   font-size: 55px;
   font-weight: bold;
+
+  ${({ theme }) => theme.mq.smallSmartphone} {
+    font-size: 35px;
+  }
 `;
 
 const StyledTab = styled(Tab)`
   font-family: 'Titillium Web', sans-serif !important;
   font-size: 28px !important;
   background-color: ${({ theme }) => theme.black} !important;
+
+  ${({ theme }) => theme.mq.smallSmartphone} {
+    font-size: 15px !important;
+  }
 `;
 
 const StyledDiv = styled.div`
@@ -22,6 +30,10 @@ const StyledDiv = styled.div`
   align-items: flex-end;
   background-color: ${({ theme }) => theme.black};
   padding: 0 50px 0 50px;
+
+  ${({ theme }) => theme.mq.smallSmartphone} {
+    padding: 0 20px 0 20px;
+  }
 `;
 
 const Navbar = () => {

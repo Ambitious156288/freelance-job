@@ -13,12 +13,20 @@ const StyledDiv = styled.div`
 const StyledFirstParagraph = styled(Fonts)`
   font-size: 70px;
   text-decoration: underline;
+
+  ${({ theme }) => theme.mq.smallSmartphone} {
+    font-size: 30px;
+  }
 `;
 
 const StyledSecondParagraph = styled(Fonts)`
   font-size: 34px;
   font-weight: 300;
   margin: 25px 0 150px 0;
+
+  ${({ theme }) => theme.mq.smallSmartphone} {
+    font-size: 20px;
+  }
 `;
 
 const StyledCenter = styled.div`
@@ -32,10 +40,10 @@ const BlackShoe = styled.img`
   margin-top: 10vh;
   z-index: -1;
 
-  ${({ theme }) => theme.mq.smallTablet} {
+  ${({ theme }) => theme.mq.smallSmartphone} {
     /* padding: 80px 90px; */
-    width: 60px;
-    height: 128px;
+    width: 250px;
+    height: 500px;
   }
 `;
 
@@ -43,10 +51,22 @@ const StyledRotateShoe = styled.img`
   transform: rotate(180deg);
   margin-top: -50vh;
   z-index: -1;
+
+  ${({ theme }) => theme.mq.smallSmartphone} {
+    /* padding: 80px 90px; */
+    width: 250px;
+    height: 500px;
+  }
 `;
 
 const StyledButton = styled(Btn)`
   cursor: pointer;
+
+  ${({ theme }) => theme.mq.smallSmartphone} {
+    font-size: 18px;
+    height: 50px;
+    width: 240px;
+  }
 `;
 
 const Home = () => (
