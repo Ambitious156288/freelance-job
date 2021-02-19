@@ -14,9 +14,8 @@ const StyledBgc = styled.div`
   z-index: -1;
 
   ${({ theme }) => theme.mq.smallSmartphone} {
-    left: 0;
-    /* width="1624px" height="100%" */
-    /* width: 100%; */
+    left: -210vw;
+    overflow: hidden;
   }
 `;
 

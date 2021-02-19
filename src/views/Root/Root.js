@@ -32,8 +32,8 @@ const Root = () => (
           <Services />
         </StyledView>
 
-        <StyledView>
-          <Price />
+        <StyledView style={{ overflow: 'hidden' }}>
+          <Price style={{ overflow: 'hidden' }} />
         </StyledView>
 
         <StyledView>

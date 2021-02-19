@@ -39,7 +39,13 @@ const StyledDiv = styled.div`
   left: 0;
   padding: 65px 0;
   background-color: ${({ theme }) => theme.black};
-  opacity: 0.97;
+  opacity: 0.9;
+
+  ${({ theme }) => theme.mq.smallSmartphone} {
+    /* position: static; */
+    /* display: flex;
+    flex-direction: column; */
+  }
 `;
 
 const StyledTitle = styled(Fonts)`
@@ -50,6 +56,10 @@ const StyledTitle = styled(Fonts)`
 
   font-size: 100px;
   color: ${({ theme }) => theme.red};
+
+  ${({ theme }) => theme.mq.smallSmartphone} {
+    font-size: 50px;
+  }
 `;
 
 const StyledFirstP = styled(Fonts)`
@@ -57,11 +67,27 @@ const StyledFirstP = styled(Fonts)`
   font-weight: bold;
   margin: 35px 0;
   color: ${({ theme }) => theme.red};
+
+  ${({ theme }) => theme.mq.smallSmartphone} {
+    font-size: 30px;
+  }
 `;
 
 const StyledSecondP = styled(Fonts)`
   font-size: 20px;
   font-weight: 400;
+
+  ${({ theme }) => theme.mq.smallSmartphone} {
+    font-size: 15px;
+    margin: 0 30px;
+  }
+`;
+
+const StyledIcon = styled.img`
+  ${({ theme }) => theme.mq.smallSmartphone} {
+    width: 151px;
+    height: 94px;
+  }
 `;
 
 const Services = () => {
@@ -77,7 +103,7 @@ const Services = () => {
             <Grid container spacing={0}>
               <Grid item xs>
                 <div className={classes.paper}>
-                  <img src={shop} width="221.51px" height="164px" alt="" />
+                  <StyledIcon src={shop} width="221.51px" height="164px" alt="" />
                   <StyledFirstP>PUNKT ZBIORCZY</StyledFirstP>
                   <StyledSecondP>
                     Możliwość pozostawienia obuwia w punktach zbiorczych do naprawy, które
@@ -88,7 +114,7 @@ const Services = () => {
 
               <Grid item xs>
                 <div className={classes.paper}>
-                  <img src={car} width="221.51px" height="164px" alt="" />
+                  <StyledIcon src={car} width="221.51px" height="164px" alt="" />
                   <StyledFirstP>DOOR TO DOOR</StyledFirstP>
                   <StyledSecondP>
                     Nie masz możliwości lub czasu aby odwiedzić naszą pracownie? Jako jedyny zakład
@@ -100,7 +126,7 @@ const Services = () => {
 
               <Grid item xs>
                 <div className={classes.paper}>
-                  <img src={group} width="221.51px" height="164px" alt="" />
+                  <StyledIcon src={group} width="221.51px" height="164px" alt="" />
                   <StyledFirstP>WYSYŁKA</StyledFirstP>
                   <StyledSecondP>
                     Jeśli nie możesz nas odwiedzić ani nie możesz skorzystać z usługi door-to-door,
