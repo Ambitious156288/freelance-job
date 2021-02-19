@@ -71,8 +71,8 @@ const StyledCenter = styled.div`
 `;
 
 const About = () => (
-  <StyledView>
-    <StyledBgc id="about">
+  <StyledView id="about">
+    <StyledBgc>
       <img src={shoemaker} width="1624px" height="100%" alt="shoemaker" />
     </StyledBgc>
 

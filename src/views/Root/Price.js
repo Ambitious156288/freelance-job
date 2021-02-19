@@ -16,7 +16,6 @@ const StyledBgc = styled.div`
   ${({ theme }) => theme.mq.smallSmartphone} {
     left: -220vw;
     width: 100vw;
-    /* overflow: hidden; */
   }
 `;
 
@@ -31,7 +30,6 @@ const StyledDiv = styled.div`
   ${({ theme }) => theme.mq.smallSmartphone} {
     opacity: 0.85;
     width: 100vw;
-    /* overflow: hidden; */
   }
 `;
 
@@ -72,8 +70,8 @@ const StyledCenter = styled.div`
 `;
 
 const Price = () => (
-  <StyledView>
-    <StyledBgc id="price">
+  <StyledView id="price">
+    <StyledBgc>
       <img src={footwear} width="1624px" height="100%" alt="footwear" />
     </StyledBgc>
 

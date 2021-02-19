@@ -25,6 +25,11 @@ const useStyles = makeStyles(theme => ({
 const StyledVisible = styled.div`
   position: relative;
   height: 100vh;
+
+  ${({ theme }) => theme.mq.smallSmartphone} {
+    /* display: grid; */
+    /* height: 150vh; */
+  }
 `;
 
 const StyledImg = styled.img`
@@ -40,12 +45,6 @@ const StyledDiv = styled.div`
   padding: 65px 0;
   background-color: ${({ theme }) => theme.black};
   opacity: 0.9;
-
-  ${({ theme }) => theme.mq.smallSmartphone} {
-    /* position: static; */
-    /* display: flex;
-    flex-direction: column; */
-  }
 `;
 
 const StyledTitle = styled(Fonts)`
@@ -94,7 +93,7 @@ const Services = () => {
   const classes = useStyles();
 
   return (
-    <>
+    <div>
       <StyledVisible id="services">
         <StyledTitle Playfair>Nasze Usługi</StyledTitle>
 
@@ -141,7 +140,7 @@ const Services = () => {
 
         <StyledImg src={tlo} width="100%" height="100%" alt="tlo" />
       </StyledVisible>
-    </>
+    </div>
   );
 };
 

@@ -1,5 +1,6 @@
 const breakpoints = {
-  smallSmartphone: 320,
+  smallSmartphone: 500,
+  // smallSmartphone: 320,
   smartphone: 480,
   bigphone: 600,
 
@@ -42,7 +43,7 @@ export const theme = {
   smallButtonWidth: '185px',
 
   mq: Object.keys(breakpoints).reduce((acc, breakpoint) => {
-    acc[breakpoint] = `@media (min-width: ${breakpoints[breakpoint]}px)`;
+    acc[breakpoint] = `@media (max-width: ${breakpoints[breakpoint]}px)`;
     return acc;
   }, {}),
 };
