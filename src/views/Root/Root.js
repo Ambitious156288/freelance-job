@@ -28,6 +28,7 @@ const Root = () => {
           <StyledView>
             <Home />
           </StyledView>
+
           <StyledView>
             <About />
           </StyledView>
@@ -40,9 +41,9 @@ const Root = () => {
             <Price style={{ overflow: 'hidden' }} />
           </StyledView>
 
-          {/* <StyledView>
+          <StyledView>
             <Find />
-          </StyledView> */}
+          </StyledView>
 
           <StyledView>
             <Contact />

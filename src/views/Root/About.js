@@ -19,6 +19,16 @@ const StyledBgc = styled.div`
   } */
 `;
 
+const StyledImage = styled.img`
+  ${({ theme }) => theme.mq.Desktop} {
+    /* width: 1124px; */
+  }
+
+  ${({ theme }) => theme.mq.smallDesktop} {
+    /* width: 132px; */
+  }
+`;
+
 const StyledDiv = styled.div`
   position: absolute;
   text-align: center;
@@ -46,11 +56,11 @@ const StyledFirst = styled(Fonts)`
   } */
 
   ${({ theme }) => theme.mq.Desktop} {
-    margin-left: -40px;
+    margin-left: -10px;
   }
 
   ${({ theme }) => theme.mq.smallDesktop} {
-    margin-left: -190px;
+    margin-left: -10px;
   }
 `;
 
@@ -64,6 +74,7 @@ const StyledSecond = styled(Fonts)`
     font-size: 17px;
     margin: 80px 0 0 65px;
   } */
+
 `;
 
 const StyledCenter = styled.div`
@@ -73,6 +84,7 @@ const StyledCenter = styled.div`
   align-items: center;
   margin: 100px 50px;
 
+
   /* ${({ theme }) => theme.mq.smallSmartphone} {
     margin: 50px 20px;
   } */
@@ -81,7 +93,7 @@ const StyledCenter = styled.div`
 const About = () => (
   <StyledView id="about">
     <StyledBgc>
-      <img src={shoemaker} width="1624px" height="100%" alt="shoemaker" />
+      <StyledImage src={shoemaker} width="1624px" height="100%" alt="shoemaker" />
     </StyledBgc>
 
     <StyledDiv>

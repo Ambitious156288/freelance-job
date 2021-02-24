@@ -53,8 +53,8 @@ const BlackShoe = styled.img`
 
 
   ${({ theme }) => theme.mq.Desktop} {
-    width: 500px;
-    height: 1230px;
+    width: 425px;
+    height: 1130px;
   }
 
   ${({ theme }) => theme.mq.smallDesktop} {
@@ -74,8 +74,8 @@ const StyledRotateShoe = styled.img`
   z-index: -1;
 
   ${({ theme }) => theme.mq.Desktop} {
-    width: 500px;
-    height: 1230px;
+    width: 425px;
+    height: 1130px;
   }
 
   ${({ theme }) => theme.mq.smallDesktop} {

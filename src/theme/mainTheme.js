@@ -11,7 +11,7 @@ const breakpoints = {
   laptops: 1281,
 
   smallDesktop: 1366,
-  Desktop: 1800,
+  Desktop: 1735,
   bigDesktop: 1920,
 
   // smallSmartphone: 320,
