@@ -1,3 +1,4 @@
+/* eslint-disable no-unused-vars */
 import React from 'react';
 import GlobalStyle from 'theme/GlobalStyle';
 import styled, { ThemeProvider } from 'styled-components';
@@ -15,37 +16,41 @@ const StyledView = styled.div`
   max-width: 100vw;
 `;
 
-const Root = () => (
-  <div>
-    <GlobalStyle />
-    <ThemeProvider theme={theme}>
-      <>
-        <StyledView>
-          <Home />
-        </StyledView>
+const Root = () => {
+  // const PageComponnets = numbers.map(number => <>{number}</>);
+  /* za pomoca map to zrobic */
 
-        <StyledView>
-          <About />
-        </StyledView>
+  return (
+    <>
+      <GlobalStyle />
+      <ThemeProvider theme={theme}>
+        <>
+          <StyledView>
+            <Home />
+          </StyledView>
+          <StyledView>
+            <About />
+          </StyledView>
 
-        <StyledView>
-          <Services />
-        </StyledView>
+          <StyledView>
+            <Services />
+          </StyledView>
 
-        <StyledView style={{ overflow: 'hidden' }}>
-          <Price style={{ overflow: 'hidden' }} />
-        </StyledView>
+          <StyledView style={{ overflow: 'hidden' }}>
+            <Price style={{ overflow: 'hidden' }} />
+          </StyledView>
 
-        <StyledView>
-          <Find />
-        </StyledView>
+          {/* <StyledView>
+            <Find />
+          </StyledView> */}
 
-        <StyledView>
-          <Contact />
-        </StyledView>
-      </>
-    </ThemeProvider>
-  </div>
-);
+          <StyledView>
+            <Contact />
+          </StyledView>
+        </>
+      </ThemeProvider>
+    </>
+  );
+};
 
 export default Root;

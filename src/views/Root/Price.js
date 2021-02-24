@@ -13,10 +13,10 @@ const StyledBgc = styled.div`
   height: 100vh;
   z-index: -1;
 
-  ${({ theme }) => theme.mq.smallSmartphone} {
+  /* ${({ theme }) => theme.mq.smallSmartphone} {
     left: -220vw;
     width: 100vw;
-  }
+  } */
 `;
 
 const StyledDiv = styled.div`
@@ -26,11 +26,11 @@ const StyledDiv = styled.div`
   height: 100vh;
   width: 50vw;
   background-color: ${({ theme }) => theme.black};
-
+/* 
   ${({ theme }) => theme.mq.smallSmartphone} {
     opacity: 0.85;
     width: 100vw;
-  }
+  } */
 `;
 
 const StyledFirst = styled(Fonts)`
@@ -51,10 +51,10 @@ const StyledSecond = styled(Fonts)`
   text-align: left;
   margin: 50px;
 
-  ${({ theme }) => theme.mq.smallSmartphone} {
+  /* ${({ theme }) => theme.mq.smallSmartphone} {
     font-size: 17px;
     margin: 35px 0;
-  }
+  } */
 `;
 
 const StyledCenter = styled.div`
@@ -64,9 +64,9 @@ const StyledCenter = styled.div`
   align-items: center;
   margin: 100px 50px;
 
-  ${({ theme }) => theme.mq.smallSmartphone} {
+  /* ${({ theme }) => theme.mq.smallSmartphone} {
     margin: 20px 0;
-  }
+  } */
 `;
 
 const Price = () => (

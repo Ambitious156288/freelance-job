@@ -13,10 +13,10 @@ const StyledBgc = styled.div`
   height: 100vh;
   z-index: -1;
 
-  ${({ theme }) => theme.mq.smallSmartphone} {
+  /* ${({ theme }) => theme.mq.smallSmartphone} {
     left: -210vw;
     overflow: hidden;
-  }
+  } */
 `;
 
 const StyledDiv = styled.div`
@@ -27,10 +27,10 @@ const StyledDiv = styled.div`
   width: 50vw;
   background-color: ${({ theme }) => theme.black};
 
-  ${({ theme }) => theme.mq.smallSmartphone} {
+  /* ${({ theme }) => theme.mq.smallSmartphone} {
     opacity: 0.85;
     width: 100vw;
-  }
+  } */
 `;
 
 const StyledFirst = styled(Fonts)`
@@ -40,10 +40,10 @@ const StyledFirst = styled(Fonts)`
   color: ${({ theme }) => theme.orange};
   margin-left: -100px;
 
-  ${({ theme }) => theme.mq.smallSmartphone} {
+  /* ${({ theme }) => theme.mq.smallSmartphone} {
     font-size: 40px;
     margin-left: -10px;
-  }
+  } */
 `;
 
 const StyledSecond = styled(Fonts)`
@@ -52,10 +52,10 @@ const StyledSecond = styled(Fonts)`
   text-align: left;
   margin: 70px 0 0 150px;
 
-  ${({ theme }) => theme.mq.smallSmartphone} {
+  /* ${({ theme }) => theme.mq.smallSmartphone} {
     font-size: 17px;
     margin: 80px 0 0 65px;
-  }
+  } */
 `;
 
 const StyledCenter = styled.div`
@@ -65,9 +65,9 @@ const StyledCenter = styled.div`
   align-items: center;
   margin: 100px 50px;
 
-  ${({ theme }) => theme.mq.smallSmartphone} {
+  /* ${({ theme }) => theme.mq.smallSmartphone} {
     margin: 50px 20px;
-  }
+  } */
 `;
 
 const About = () => (
