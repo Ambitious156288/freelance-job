@@ -44,6 +44,14 @@ const StyledFirst = styled(Fonts)`
     font-size: 40px;
     margin-left: -10px;
   } */
+
+  ${({ theme }) => theme.mq.Desktop} {
+    margin-left: -40px;
+  }
+
+  ${({ theme }) => theme.mq.smallDesktop} {
+    margin-left: -190px;
+  }
 `;
 
 const StyledSecond = styled(Fonts)`
