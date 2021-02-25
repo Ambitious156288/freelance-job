@@ -39,13 +39,14 @@ const Root = () => {
 
           <StyledView style={{ overflow: 'hidden' }}>
             <Price style={{ overflow: 'hidden' }} />
-          </StyledView> */}
-
-          <StyledView>
-            <Find />
           </StyledView>
+*/}
 
           {/* <StyledView>
+            <Find />
+          </StyledView> */}
+          {/* 
+          <StyledView>
             <Contact />
           </StyledView> */}
         </>

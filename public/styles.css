@@ -1,3 +1,11 @@
 .MuiTabs-fixed .MuiTab-textColorSecondary {
   color: white;
 }
+
+.makeStyles-formTextLabel-8 {
+  font-size: 16px !important;
+}
+
+.makeStyles-formTextInput-7 {
+  font-size: 15px !important;
+}

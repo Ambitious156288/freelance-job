@@ -18,32 +18,89 @@ const useStyles = makeStyles(theme => ({
     overflow: 'hidden',
     padding: theme.spacing(0, 3),
   },
+  root2: {
+    '@media (max-width:480px)': {
+      display: 'flex',
+      flexDirection: 'column',
+    },
+  },
   paper: {
     maxWidth: 700,
     margin: `${theme.spacing(1)}px auto`,
     padding: theme.spacing(6),
+
+    '@media (max-width:480px)': {
+      padding: theme.spacing(3),
+      width: '100vw',
+    },
   },
   form: {
     maxWidth: 700,
     padding: theme.spacing(6),
-    margin: '80px',
+    margin: '50px',
+
+    '@media (max-width:480px)': {
+      width: '150%',
+    },
+  },
+  center: {
+    display: 'flex',
+    alignItems: 'center',
   },
 }));
 
 const StyledContact = styled.div`
   height: 95vh;
   background-color: ${({ theme }) => theme.red};
+
+  ${({ theme }) => theme.mq.smartphone} {
+    height: auto;
+  }
 `;
 
 const StyledFirstP = styled(Fonts)`
   font-size: 55px;
   font-weight: bold;
   font-style: italic;
+
+  ${({ theme }) => theme.mq.smallDesktop} {
+    font-size: 50px;
+  }
+
+  ${({ theme }) => theme.mq.laptops} {
+    font-size: 45px;
+  }
+
+  ${({ theme }) => theme.mq.bigTablet} {
+    font-size: 37px;
+  }
+
+  ${({ theme }) => theme.mq.smartphone} {
+    font-size: 27px;
+    width: 100vw;
+    text-align: center;
+  }
 `;
 
 const StyledSecondP = styled(Fonts)`
   font-size: 40px;
   font-weight: bold;
+
+  ${({ theme }) => theme.mq.smallDesktop} {
+    font-size: 32px;
+  }
+
+  ${({ theme }) => theme.mq.laptops} {
+    font-size: 28px;
+  }
+
+  ${({ theme }) => theme.mq.bigTablet} {
+    font-size: 22px;
+  }
+
+  ${({ theme }) => theme.mq.smartphone} {
+    font-size: 18px;
+  }
 `;
 
 const StyledForm = styled.div`
@@ -57,6 +114,10 @@ const StyledFooter = styled.div`
   justify-content: center;
   align-items: center;
   background-color: ${({ theme }) => theme.footerColor};
+
+  ${({ theme }) => theme.mq.smartphone} {
+    height: auto;
+  }
 `;
 
 const StyledFontFooter = styled(Fonts)`
@@ -64,6 +125,22 @@ const StyledFontFooter = styled(Fonts)`
   font-weight: 300;
   opacity: 0.3;
   letter-spacing: 1px;
+
+  ${({ theme }) => theme.mq.smartphone} {
+    font-size: 18px;
+  }
+`;
+
+const StyledImg = styled.img`
+  ${({ theme }) => theme.mq.smallDesktop} {
+    width: 79px;
+    height: 69px;
+  }
+
+  ${({ theme }) => theme.mq.smartphone} {
+    width: 49px;
+    height: 39px;
+  }
 `;
 
 const Contact = () => {
@@ -71,64 +148,68 @@ const Contact = () => {
 
   const FormRow = () => {
     return (
-      <>
+      <Grid container xs={12} className={classes.root2}>
         <Grid item xs={6}>
-          <div className={classes.paper}>
-            <StyledFirstP Playfair>Skontaktuj się z nami</StyledFirstP>
-          </div>
+          <div>
+            <div className={classes.paper}>
+              <StyledFirstP Playfair>Skontaktuj się z nami</StyledFirstP>
+            </div>
 
-          <div className={classes.paper}>
-            <Grid container wrap="nowrap" spacing={7}>
-              <Grid item>
-                <a href="tel:+48503572044">
-                  <img src={tel} width="89.59" height="79.59" alt="tel" />
-                </a>
+            <div className={classes.paper}>
+              <Grid container wrap="nowrap" spacing={7}>
+                <Grid item>
+                  <a href="tel:+48503572044">
+                    <StyledImg src={tel} width="89.59" height="79.59" alt="tel" />
+                  </a>
+                </Grid>
+                <Grid className={classes.center} item xs>
+                  <Typography>
+                    <StyledSecondP>503 572 044</StyledSecondP>
+                  </Typography>
+                </Grid>
               </Grid>
-              <Grid item xs>
-                <Typography>
-                  <StyledSecondP>503 572 044</StyledSecondP>
-                </Typography>
-              </Grid>
-            </Grid>
-          </div>
+            </div>
 
-          <div className={classes.paper}>
-            <Grid container wrap="nowrap" spacing={7}>
-              <Grid item>
-                <a href="mailto:bnk@szewckrakow.com">
-                  <img src={email} width="89.59" height="68.24" alt="email" />
-                </a>
+            <div className={classes.paper}>
+              <Grid container wrap="nowrap" spacing={7}>
+                <Grid item>
+                  <a href="mailto:bnk@szewckrakow.com">
+                    <StyledImg src={email} width="89.59" height="68.24" alt="email" />
+                  </a>
+                </Grid>
+                <Grid className={classes.center} item xs>
+                  <Typography>
+                    <StyledSecondP>bnk@szewckrakow.com</StyledSecondP>
+                  </Typography>
+                </Grid>
               </Grid>
-              <Grid item xs>
-                <Typography>
-                  <StyledSecondP>bnk@szewckrakow.com</StyledSecondP>
-                </Typography>
-              </Grid>
-            </Grid>
-          </div>
+            </div>
 
-          <div className={classes.paper}>
-            <Grid container wrap="nowrap" spacing={7}>
-              <Grid item>
-                <a href="https://m.me/100002883323264">
-                  <img src={fb} width="89.59" height="89.59" alt="fb" />
-                </a>
+            <div className={classes.paper}>
+              <Grid container wrap="nowrap" spacing={7}>
+                <Grid item>
+                  <a href="https://m.me/100002883323264">
+                    <StyledImg src={fb} width="89.59" height="89.59" alt="fb" />
+                  </a>
+                </Grid>
+                <Grid className={classes.center} item xs>
+                  <Typography>
+                    <StyledSecondP>Napisz na Facebook'u</StyledSecondP>
+                  </Typography>
+                </Grid>
               </Grid>
-              <Grid item xs>
-                <Typography>
-                  <StyledSecondP>Napisz na Facebook'u</StyledSecondP>
-                </Typography>
-              </Grid>
-            </Grid>
+            </div>
           </div>
         </Grid>
 
         <Grid item xs={6}>
-          <StyledForm className={classes.form}>
-            <ContactForm />
-          </StyledForm>
+          <div>
+            <StyledForm className={classes.form}>
+              <ContactForm />
+            </StyledForm>
+          </div>
         </Grid>
-      </>
+      </Grid>
     );
   };
 

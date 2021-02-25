@@ -34,13 +34,25 @@ const StyledTitle = styled(Fonts)`
   font-weight: bold;
   font-style: italic;
   padding-bottom: 25px;
+
+  ${({ theme }) => theme.mq.laptops} {
+    font-size: 40px;
+  }
+
+  ${({ theme }) => theme.mq.bigTablet} {
+    font-size: 36px;
+  }
 `;
 
 const useStyles = makeStyles(() => ({
   root: { fontSize: 24 },
-  resize: {
-    fontSize: 24,
+
+  formTextInput: {
     marginTop: 8,
+    fontSize: 24,
+  },
+  formTextLabel: {
+    fontSize: 24,
   },
 }));
 
@@ -51,8 +63,23 @@ const StyledBtnDiv = styled.div`
 
 const StyledBtn = styled(Btn)`
   cursor: pointer;
+
+  ${({ theme }) => theme.mq.laptops} {
+    font-size: 25px;
+    width: 150px;
+    height: 70px;
+  }
+
+  ${({ theme }) => theme.mq.smartphone} {
+    font-size: 15px;
+    width: 80px;
+    height: 35px;
+  }
 `;
 
+const StyledChooseFile = styled.div`
+  display: flex;
+`;
 const ContactForm = () => {
   const classes = useStyles();
 
@@ -71,104 +98,118 @@ const ContactForm = () => {
 
   return (
     <>
-      <div>
-        <form onSubmit={formik.handleSubmit}>
-          <StyledTitle Playfair black>
-            Napisz do nas
-          </StyledTitle>
-          <TextField
-            InputLabelProps={{ style: { fontSize: 24 } }}
-            InputProps={{
-              classes: {
-                input: classes.resize,
-              },
-            }}
-            fullWidth
-            id="fullName"
-            name="fullName"
-            label="Imię i nazwisko:"
-            value={formik.values.fullName}
-            onChange={formik.handleChange}
-            error={formik.touched.fullName && Boolean(formik.errors.fullName)}
-            helperText={formik.touched.fullName && formik.errors.fullName}
-          />
-          <br />
-          <br />
-          <TextField
-            InputLabelProps={{ style: { fontSize: 24 } }}
-            InputProps={{
-              classes: {
-                input: classes.resize,
-              },
-            }}
-            fullWidth
-            id="email"
-            name="email"
-            label="Twój email:"
-            value={formik.values.email}
-            onChange={formik.handleChange}
-            error={formik.touched.email && Boolean(formik.errors.email)}
-            helperText={formik.touched.email && formik.errors.email}
-          />
-          <br />
-          <br />
-          <TextField
-            InputLabelProps={{ style: { fontSize: 24 } }}
-            InputProps={{
-              classes: {
-                input: classes.resize,
-              },
-            }}
-            fullWidth
-            id="topic"
-            name="topic"
-            label="Temat:"
-            value={formik.values.topic}
-            onChange={formik.handleChange}
-            error={formik.touched.topic && Boolean(formik.errors.topic)}
-            helperText={formik.touched.topic && formik.errors.topic}
-          />
-          <br />
-          <br />
+      <form onSubmit={formik.handleSubmit}>
+        <StyledTitle Playfair black>
+          Napisz do nas
+        </StyledTitle>
+        <TextField
+          InputProps={{
+            classes: {
+              input: classes.formTextInput,
+            },
+          }}
+          InputLabelProps={{
+            classes: {
+              root: classes.formTextLabel,
+            },
+          }}
+          fullWidth
+          id="fullName"
+          name="fullName"
+          label="Imię i nazwisko:"
+          value={formik.values.fullName}
+          onChange={formik.handleChange}
+          error={formik.touched.fullName && Boolean(formik.errors.fullName)}
+          helperText={formik.touched.fullName && formik.errors.fullName}
+        />
+        <br />
+        <br />
+        <TextField
+          InputProps={{
+            classes: {
+              input: classes.formTextInput,
+            },
+          }}
+          InputLabelProps={{
+            classes: {
+              root: classes.formTextLabel,
+            },
+          }}
+          fullWidth
+          id="email"
+          name="email"
+          label="Twój email:"
+          value={formik.values.email}
+          onChange={formik.handleChange}
+          error={formik.touched.email && Boolean(formik.errors.email)}
+          helperText={formik.touched.email && formik.errors.email}
+        />
+        <br />
+        <br />
+        <TextField
+          InputProps={{
+            classes: {
+              input: classes.formTextInput,
+            },
+          }}
+          InputLabelProps={{
+            classes: {
+              root: classes.formTextLabel,
+            },
+          }}
+          fullWidth
+          id="topic"
+          name="topic"
+          label="Temat:"
+          value={formik.values.topic}
+          onChange={formik.handleChange}
+          error={formik.touched.topic && Boolean(formik.errors.topic)}
+          helperText={formik.touched.topic && formik.errors.topic}
+        />
+        <br />
+        <br />
 
-          <TextField
-            InputLabelProps={{ style: { fontSize: 24 } }}
-            InputProps={{
-              classes: {
-                input: classes.resize,
-              },
-            }}
-            fullWidth
-            id="content"
-            name="content"
-            label="Treść wiadomości:"
-            multiline
-            rows={10}
-            value={formik.values.content}
-            onChange={formik.handleChange}
-            error={formik.touched.content && Boolean(formik.errors.content)}
-            helperText={formik.touched.content && formik.errors.content}
-          />
-          <br />
-          <br />
-          <br />
+        <TextField
+          InputProps={{
+            classes: {
+              input: classes.formTextInput,
+            },
+          }}
+          InputLabelProps={{
+            classes: {
+              root: classes.formTextLabel,
+            },
+          }}
+          fullWidth
+          id="content"
+          name="content"
+          label="Treść wiadomości:"
+          multiline
+          rows={10}
+          value={formik.values.content}
+          onChange={formik.handleChange}
+          error={formik.touched.content && Boolean(formik.errors.content)}
+          helperText={formik.touched.content && formik.errors.content}
+        />
+        <br />
+        <br />
+        <br />
 
-          <div>
-            <input type="file" className="inputFile" data-testid="inputFile" />
-            <div className="container">
-              <div className="fileName" data-testid="fileName"></div>
-            </div>
+        <StyledChooseFile>
+          <input type="file" className="inputFile" data-testid="inputFile" />
+          <div className="container">
+            <div className="fileName" data-testid="fileName"></div>
           </div>
-          <br />
-          <br />
+        </StyledChooseFile>
+        <br />
+        <br />
 
-          <StyledBtnDiv>
-            <StyledBtn color="primary" variant="contained" type="submit">
-              Wyślij
-            </StyledBtn>
-          </StyledBtnDiv>
-        </form>
-      </div>
+        <StyledBtnDiv>
+          <StyledBtn color="primary" variant="contained" type="submit">
+            Wyślij
+          </StyledBtn>
+        </StyledBtnDiv>
+      </form>
     </>
   );
 };
