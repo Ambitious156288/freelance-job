@@ -24,7 +24,11 @@ const StyledTitle = styled(Fonts)`
   }
 
   ${({ theme }) => theme.mq.smallTablet} {
-    font-size: 7px;
+    font-size: 38px;
+  }
+
+  ${({ theme }) => theme.mq.smartphone} {
+    font-size: 30px;
   }
 `;
 
@@ -34,10 +38,11 @@ const StyledDiv = styled(Fonts)`
   justify-content: center;
   align-items: center;
   background-color: ${({ theme }) => theme.red};
-/* 
-  ${({ theme }) => theme.mq.smallSmartphone} {
-    padding: 20px 0;
-  } */
+
+  ${({ theme }) => theme.mq.smallTablet} {
+    text-align: center;
+    padding: 0 20px;
+  }
 `;
 
 const Find = () => {

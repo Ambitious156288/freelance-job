@@ -1,8 +1,6 @@
 const breakpoints = {
-  smallSmartphone: 480,
-
-  smartphone: 580,
-  bigphone: 600,
+  smallSmartphone: 320,
+  smartphone: 480,
 
   smallTablet: 600,
   tablet: 801,
