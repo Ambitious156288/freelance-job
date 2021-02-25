@@ -7,11 +7,25 @@ const StyledTitle = styled(Fonts)`
   font-size: 70px;
   font-weight: bold;
 
-  /* ${({ theme }) => theme.mq.smallSmartphone} {
-    text-align: center;
-    font-size: 30px;
-    padding: 20px 0;
-  } */
+  ${({ theme }) => theme.mq.Desktop} {
+    font-size: 67px;
+  }
+
+  ${({ theme }) => theme.mq.laptops} {
+    font-size: 60px;
+  }
+
+  ${({ theme }) => theme.mq.bigTablet} {
+    font-size: 50px;
+  }
+
+  ${({ theme }) => theme.mq.tablet} {
+    font-size: 37px;
+  }
+
+  ${({ theme }) => theme.mq.smallTablet} {
+    font-size: 7px;
+  }
 `;
 
 const StyledDiv = styled(Fonts)`
