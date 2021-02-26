@@ -12,11 +12,6 @@ const StyledBgc = styled.div`
   left: -22vw;
   height: 100vh;
   z-index: -1;
-
-  /* ${({ theme }) => theme.mq.smallSmartphone} {
-    left: -220vw;
-    width: 100vw;
-  } */
 `;
 
 const StyledDiv = styled.div`
@@ -26,11 +21,11 @@ const StyledDiv = styled.div`
   height: 100vh;
   width: 50vw;
   background-color: ${({ theme }) => theme.black};
-/* 
-  ${({ theme }) => theme.mq.smallSmartphone} {
-    opacity: 0.85;
+
+  ${({ theme }) => theme.mq.smartphone} {
     width: 100vw;
-  } */
+    opacity: 0.9;
+  }
 `;
 
 const StyledFirst = styled(Fonts)`
@@ -40,8 +35,16 @@ const StyledFirst = styled(Fonts)`
   color: ${({ theme }) => theme.orange};
   margin-right: 20vw;
 
-  ${({ theme }) => theme.mq.smallSmartphone} {
-    font-size: 50px;
+  ${({ theme }) => theme.mq.laptops} {
+    font-size: 63px;
+  }
+
+  ${({ theme }) => theme.mq.bigTablet} {
+    font-size: 55px;
+  }
+
+  ${({ theme }) => theme.mq.smartphone} {
+    margin: -70px 0 0 0;
   }
 `;
 
@@ -51,10 +54,20 @@ const StyledSecond = styled(Fonts)`
   text-align: left;
   margin: 50px;
 
-  /* ${({ theme }) => theme.mq.smallSmartphone} {
-    font-size: 17px;
-    margin: 35px 0;
-  } */
+  ${({ theme }) => theme.mq.laptops} {
+    font-size: 25px;
+    margin: 20px;
+  }
+
+  ${({ theme }) => theme.mq.bigTablet} {
+    font-size: 30px;
+    margin: 10px;
+  }
+
+  ${({ theme }) => theme.mq.smartphone} {
+    font-size: 16px;
+    margin: 25px 0 0 0;
+  }
 `;
 
 const StyledCenter = styled.div`
@@ -63,10 +76,6 @@ const StyledCenter = styled.div`
   justify-content: center;
   align-items: center;
   margin: 100px 50px;
-
-  /* ${({ theme }) => theme.mq.smallSmartphone} {
-    margin: 20px 0;
-  } */
 `;
 
 const Price = () => (
