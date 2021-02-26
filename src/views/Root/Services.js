@@ -47,6 +47,14 @@ const StyledDiv = styled.div`
   padding: 65px 0;
   background-color: ${({ theme }) => theme.black};
   opacity: 0.9;
+
+  ${({ theme }) => theme.mq.tablet} {
+    /* top: 65%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 0; */
+    width: 100vw;
+  }
 `;
 
 const StyledTitle = styled(Fonts)`
@@ -58,9 +66,13 @@ const StyledTitle = styled(Fonts)`
   font-size: 100px;
   color: ${({ theme }) => theme.red};
 
-  /* ${({ theme }) => theme.mq.smallSmartphone} {
-    font-size: 50px;
-  } */
+  ${({ theme }) => theme.mq.laptops} {
+    font-size: 80px;
+  }
+
+  ${({ theme }) => theme.mq.bigTablet} {
+    font-size: 60px;
+  }
 `;
 
 const StyledFirstP = styled(Fonts)`
@@ -68,20 +80,11 @@ const StyledFirstP = styled(Fonts)`
   font-weight: bold;
   margin: 35px 0;
   color: ${({ theme }) => theme.red};
-/* 
-  ${({ theme }) => theme.mq.smallSmartphone} {
-    font-size: 30px;
-  } */
 `;
 
 const StyledSecondP = styled(Fonts)`
   font-size: 20px;
   font-weight: 400;
-
-  /* ${({ theme }) => theme.mq.smallSmartphone} {
-    font-size: 15px;
-    margin: 0 30px;
-  } */
 `;
 
 const StyledIcon = styled.img`

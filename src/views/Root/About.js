@@ -12,21 +12,6 @@ const StyledBgc = styled.div`
   right: 0;
   height: 100vh;
   z-index: -1;
-
-  /* ${({ theme }) => theme.mq.smallSmartphone} {
-    left: -210vw;
-    overflow: hidden;
-  } */
-`;
-
-const StyledImage = styled.img`
-  ${({ theme }) => theme.mq.Desktop} {
-    /* width: 1124px; */
-  }
-
-  ${({ theme }) => theme.mq.smallDesktop} {
-    /* width: 132px; */
-  }
 `;
 
 const StyledDiv = styled.div`
@@ -36,11 +21,6 @@ const StyledDiv = styled.div`
   height: 100vh;
   width: 50vw;
   background-color: ${({ theme }) => theme.black};
-
-  /* ${({ theme }) => theme.mq.smallSmartphone} {
-    opacity: 0.85;
-    width: 100vw;
-  } */
 
   ${({ theme }) => theme.mq.smartphone} {
     width: 100vw;
@@ -104,17 +84,12 @@ const StyledCenter = styled.div`
   justify-content: center;
   align-items: center;
   margin: 100px 50px;
-
-
-  /* ${({ theme }) => theme.mq.smallSmartphone} {
-    margin: 50px 20px;
-  } */
 `;
 
 const About = () => (
   <StyledView id="about">
     <StyledBgc>
-      <StyledImage src={shoemaker} width="1624px" height="100%" alt="shoemaker" />
+      <img src={shoemaker} width="1624px" height="100%" alt="shoemaker" />
     </StyledBgc>
 
     <StyledDiv>

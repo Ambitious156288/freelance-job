@@ -27,22 +27,21 @@ const Root = () => {
         <>
           {/* <StyledView>
             <Home />
-          </StyledView>
-          */}
+          </StyledView> */}
+
+          {/* <StyledView>
+            <About />
+          </StyledView> */}
 
           <StyledView>
-            <About />
+            <Services />
           </StyledView>
 
-          {/* <StyledView>
-            <Services />
-          </StyledView> */}
-
-          {/* <StyledView style={{ overflow: 'hidden' }}>
+          <StyledView style={{ overflow: 'hidden' }}>
             <Price style={{ overflow: 'hidden' }} />
-          </StyledView> */}
-
-          {/* <StyledView>
+          </StyledView>
+          {/*
+          <StyledView>
             <Find />
           </StyledView>
 
