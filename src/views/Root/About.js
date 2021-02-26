@@ -41,6 +41,11 @@ const StyledDiv = styled.div`
     opacity: 0.85;
     width: 100vw;
   } */
+
+  ${({ theme }) => theme.mq.smartphone} {
+    width: 100vw;
+    opacity: 0.9;
+  }
 `;
 
 const StyledFirst = styled(Fonts)`
@@ -50,17 +55,24 @@ const StyledFirst = styled(Fonts)`
   color: ${({ theme }) => theme.orange};
   margin-left: -100px;
 
-  /* ${({ theme }) => theme.mq.smallSmartphone} {
-    font-size: 40px;
-    margin-left: -10px;
-  } */
-
   ${({ theme }) => theme.mq.Desktop} {
     margin-left: -10px;
   }
 
   ${({ theme }) => theme.mq.smallDesktop} {
     margin-left: -10px;
+  }
+
+  ${({ theme }) => theme.mq.bigTablet} {
+    font-size: 60px;
+  }
+
+  ${({ theme }) => theme.mq.smartphone} {
+    font-size: 50px;
+  }
+
+  ${({ theme }) => theme.mq.smallSmartphone} {
+    font-size: 30px;
   }
 `;
 
@@ -70,11 +82,20 @@ const StyledSecond = styled(Fonts)`
   text-align: left;
   margin: 70px 0 0 150px;
 
-  /* ${({ theme }) => theme.mq.smallSmartphone} {
-    font-size: 17px;
-    margin: 80px 0 0 65px;
-  } */
+  ${({ theme }) => theme.mq.laptops} {
+    font-size: 25px;
+    margin: 40px 0 0 40px;
+  }
 
+  ${({ theme }) => theme.mq.bigTablet} {
+    font-size: 20px;
+    margin: 50px 0 0 10px;
+  }
+
+  ${({ theme }) => theme.mq.smallSmartphone} {
+    font-size: 18px;
+    margin: 30px 0 0 20px;
+  }
 `;
 
 const StyledCenter = styled.div`
