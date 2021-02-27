@@ -17,9 +17,6 @@ const StyledView = styled.div`
 `;
 
 const Root = () => {
-  // const PageComponnets = numbers.map(number => <>{number}</>);
-  /* za pomoca map to zrobic */
-
   return (
     <>
       <GlobalStyle />

@@ -54,7 +54,6 @@ const Navbar = () => {
               indicatorColor="secondary"
               textColor="secondary"
               onChange={handleChange}
-              // orientation="vertical"
             >
               <StyledTab label="O nas" href="#about" />
               <StyledTab label="USŁUGI" href="#services" />
