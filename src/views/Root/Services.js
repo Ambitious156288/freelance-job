@@ -22,6 +22,10 @@ const useStyles = makeStyles(theme => ({
   root: {
     flexGrow: 1,
   },
+  rootMobile: {
+    marginLeft: 30,
+    marginRight: 30,
+  },
   paper: {
     padding: theme.spacing(2),
     textAlign: 'center',
@@ -49,11 +53,11 @@ const StyledDiv = styled.div`
   opacity: 0.9;
 
   ${({ theme }) => theme.mq.tablet} {
-    /* top: 65%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    padding: 0; */
     width: 100vw;
+  }
+
+  ${({ theme }) => theme.mq.smartphone} {
+    padding: 15px 0;
   }
 `;
 
@@ -73,6 +77,12 @@ const StyledTitle = styled(Fonts)`
   ${({ theme }) => theme.mq.bigTablet} {
     font-size: 60px;
   }
+
+  ${({ theme }) => theme.mq.smartphone} {
+    width: 100%;
+    font-size: 45px;
+    text-align: center;
+  }
 `;
 
 const StyledFirstP = styled(Fonts)`
@@ -80,14 +90,28 @@ const StyledFirstP = styled(Fonts)`
   font-weight: bold;
   margin: 35px 0;
   color: ${({ theme }) => theme.red};
+
+  ${({ theme }) => theme.mq.smartphone} {
+    font-size: 20px;
+    margin: 15px 0;
+  }
 `;
 
 const StyledSecondP = styled(Fonts)`
   font-size: 20px;
   font-weight: 400;
+
+  ${({ theme }) => theme.mq.smartphone} {
+    font-size: 14px;
+  }
 `;
 
 const StyledIcon = styled.img`
+  ${({ theme }) => theme.mq.smartphone} {
+    width: 121px;
+    height: 84px;
+  }
+
   ${({ theme }) => theme.mq.smallSmartphone} {
     width: 151px;
     height: 94px;
@@ -112,13 +136,21 @@ function CarouselMobile() {
   const items = [
     {
       image: shop,
-      name: 'Random Name #1',
-      description: '1',
+      name: 'PUNKT ZBIORCZY',
+      description:
+        ' Możliwość pozostawienia obuwia w punktach zbiorczych do naprawy, które znajdziesz w "Znajdź nas" !!!',
     },
     {
       image: car,
-      name: 'Random Name #2',
-      description: '2',
+      name: 'DOOR TO DOOR',
+      description:
+        ' Nie masz możliwości lub czasu aby odwiedzić naszą pracownie? Jako jedyny  zakład w Krakowie oferujemy możliwość dojazdu do klienta w systemie       door-to-door, obuwie zostanie odebrane naprawione i odwiezione we wcześniej ustalone miejsce!',
+    },
+    {
+      image: group,
+      name: 'WYSYŁKA',
+      description:
+        'Jeśli nie możesz nas odwiedzić ani nie możesz skorzystać z usługi door-to-door, naprawiamy obuwie również wysyłkowo! Masz uszkodzone obuwie? napisz do nas i najlepiej wyślij nam zdjęcia!',
     },
   ];
 
@@ -163,7 +195,7 @@ const Services = () => {
         <div className={classes.root}>
           <Grid container spacing={0}>
             <StyledCarouselMobile>
-              <div className={classes.root}>
+              <div className={classes.rootMobile}>
                 <Grid container spacing={0}>
                   <CarouselMobile />
                 </Grid>

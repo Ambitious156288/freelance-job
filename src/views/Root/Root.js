@@ -25,13 +25,13 @@ const Root = () => {
       <GlobalStyle />
       <ThemeProvider theme={theme}>
         <>
-          {/* <StyledView>
+          <StyledView>
             <Home />
-          </StyledView> */}
+          </StyledView>
 
-          {/* <StyledView>
+          <StyledView>
             <About />
-          </StyledView> */}
+          </StyledView>
 
           <StyledView>
             <Services />
@@ -40,14 +40,14 @@ const Root = () => {
           <StyledView style={{ overflow: 'hidden' }}>
             <Price style={{ overflow: 'hidden' }} />
           </StyledView>
-          {/*
+
           <StyledView>
             <Find />
           </StyledView>
 
           <StyledView>
             <Contact />
-          </StyledView> */}
+          </StyledView>
         </>
       </ThemeProvider>
     </>
