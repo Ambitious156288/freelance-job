@@ -14,9 +14,7 @@ import Grid from '@material-ui/core/Grid';
 
 import Fonts from 'components/atoms/Fonts/Fonts';
 
-// import CarouselMobile from 'components/organisms/CarouselMobile/CarouselMobile';
 import Carousel from 'react-material-ui-carousel';
-// import { Paper, Button } from '@material-ui/core';
 
 const useStyles = makeStyles(theme => ({
   root: {
